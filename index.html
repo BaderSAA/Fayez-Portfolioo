@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فايز الجهني | Independent Developer</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #4f46e5;
+            --accent: #f59e0b;
+            --bg: #ffffff;
+            --text: #0f172a;
+            --card-bg: #f8fafc;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f172a;
+            --text: #f8fafc;
+            --card-bg: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+
+        /* زر الوضع الليلي */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            height: 400px;
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: var(--primary);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -60px auto 50px;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            border: 1px solid rgba(100, 100, 100, 0.1);
+        }
+
+        .skill-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 10px;
+            margin: 5px;
+            font-size: 0.9em;
+            transition: 0.3s;
+        }
+
+        .skill-badge:hover {
+            transform: scale(1.1) rotate(2deg);
+            background: var(--accent);
+        }
+
+        .cert-box {
+            border-right: 4px solid var(--accent);
+            padding: 15px;
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 0 10px 10px 0;
+            margin-top: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover { background: #d97706; }
+    </style>
+</head>
+<body>
+
+    <button class="theme-toggle" onclick="toggleTheme()">تبديل الوضع 🌓</button>
+
+    <header>
+        <div class="profile-img">👨‍💻</div>
+        <h1>فايز مصلح سلمان الجهني</h1>
+        <p>مطور حلول ويب متميزة | مدير مشاريع تقنية معتمد</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>الرؤية المهنية</h2>
+            <p>متخصص في بناء تجارب رقمية تجمع بين الأداء العالي والتصميم الجذاب. أعتمد على منهجيات إدارة المشاريع الحديثة لضمان جودة التسليم ودقة المواعيد.</p>
+        </div>
+
+        <div class="card">
+            <h2>الشهادات والاعتمادات</h2>
+            <div class="cert-box">
+                <strong>شهادة تطوير تطبيقات الويب - منصة دروب</strong>
+                <p>إتقان بناء هيكلة المواقع المتقدمة وتنسيقها برمجياً.</p>
+            </div>
+            <div class="cert-box" style="border-right-color: var(--primary); background: rgba(99, 102, 241, 0.1);">
+                <strong>شهادة إدارة مشاريع تقنية المعلومات - منصة دروب</strong>
+                <p>القدرة على قيادة الفرق التقنية وتحليل المخاطر البرمجية.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>المختبر التقني</h2>
+            <div class="skills-container">
+                <div class="skill-badge">HTML5 / CSS3 Expert</div>
+                <div class="skill-badge">JavaScript Logic</div>
+                <div class="skill-badge">Responsive Design</div>
+                <div class="skill-badge">Project Planning (Agile)</div>
+                <div class="skill-badge">UI/UX Optimization</div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+             <a href="#" class="contact-btn">بدء مشروع جديد</a>
+        </div>
+    </div>
+
+    <footer>
+        <p style="text-align: center; color: #94a3b8; padding: 20px;">
+            تمت البرمجة بواسطة فايز الجهني كإثبات مزاولة مهنة العمل الحر
+        </p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+            }
+        }
+    </script>
+</body>
+</html>
